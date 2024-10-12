@@ -2,16 +2,17 @@
 #include <stdlib.h>
 
 int main() {
-    int valor;
+    int valor , quantidadeCedula, cedula;
     int opcao = 0;  // Variável para controle do menu
-    int cedulas100 = 1, cedulas50 = 1, cedulas20 = 1, cedulas10 = 2, cedulas5 = 1, cedulas2 = 3, cedulas1 = 1;
-    int saque100 = 0, saque50 = 0, saque20 = 0, saque10 = 0, saque5 = 0, saque2 = 0, saque1 = 0;
+   int cedulas100 = 1, cedulas50 = 1, cedulas20 = 1, cedulas10 = 2, cedulas5 = 1, cedulas2 = 3, cedulas1 = 1;
+   int c100 = 100, c50 = 50, c20 = 20, c10 = 10, c5 = 5, c2 = 2, c1 = 1;
+     int saque100 = 0, saque50 = 0, saque20 = 0, saque10 = 0, saque5 = 0, saque2 = 0, saque1 = 0;
 
     // Menu simplificado
     while (opcao != -1) {
         printf("\n******************************************************************");
         printf("\nAluno1: Andre Luiz Lacerda - Número de matrícula: 8163960");
-        printf("\nAluno1: Diego Vinicius Marçal - Número de matrícula: 24242424");
+        printf("\nAluno1: Diego Vinicius Marçal - Número de matrícula: 8162076");
         printf("\nExercício-Programa 1 — Caixa Eletrônico");
         printf("\nProgramação Avançada - 2024 - Professor: Bruno Perillo");
         printf("\nCompilador: ... (DevC++ ou gcc) versão ...");
@@ -108,8 +109,37 @@ int main() {
                 printf("Não há cédulas suficientes para realizar o saque.\n");
             }
 
-        } else if (opcao == -1) {
-            printf("Encerrando o programa...\n");
+        }else if (opcao == 1) {
+            printf("Digite a quantidade de cedula: ");
+            scanf("%d", &quantidadeCedula);
+            printf("Digite o valor da cedula: ");
+            scanf("%d", &cedula);
+
+           if (cedula = c100){
+                cedulas100 += quantidadeCedula;
+                printf("Quantidade total da cedula: %d", cedulas100);
+            }else if (cedula = c50){
+                 cedulas50 += quantidadeCedula;
+                 printf("Quantidade total da cedula: %d", cedulas50);
+            }else if (cedula = c20){
+                 cedulas20 += quantidadeCedula;
+                 printf("Quantidade total da cedula: %d", cedulas20);
+            }else if (cedula = c10){
+                 cedulas10 += quantidadeCedula;
+                 printf("Quantidade total da cedula: %d", cedulas10);
+            }else if (cedula = c5){
+                 cedulas5 += quantidadeCedula;
+                 printf("Quantidade total da cedula: %d", cedulas5);
+            }else if (cedula = c2){
+                 cedulas2 += quantidadeCedula;
+                 printf("Quantidade total da cedula: %d", cedulas2);
+            }else if (cedula = c1){
+                 cedulas1 += quantidadeCedula;
+                 printf("Quantidade total da cedula: %d", cedulas1);
+            }
+
+        }else if (opcao == -1) {
+            printf("Encerrando oquantidadeCedula programa...\n");
         } else {
             printf("Opção inválida. Tente novamente.\n");
         }
